@@ -3,16 +3,19 @@
     <h1>Super Hero Survey</h1>
     <br>
 
-    <label for="name">Name </label>
-    <input type="text" id="name">
+    <form action="survey" method="POST" name="survey">
+        <label for="name">Name </label>
+        <input type="text" id="name" name="name">
 
-    <p> Who are you favorite Super Heroes</p>
-    <repeat group="{{@choices}}" value="{{@choice}}}">
-        <label>
-            <input type="checkbox" name="choices[]" value="{{@choice}}">
-            {{@choice}}
-        </label>
-        <br>
-    </repeat>
+        <p> Who are you favorite Super Heroes</p>
+        <repeat group="{{@choices}}" value="{{@choice}}">
+            <label>
+                <input type="checkbox" name="choices[]" value="{{@choice}}">
+                {{@choice}}
+            </label>
+            <br>
+        </repeat>
+        <input type="submit" name="submit" value="submit">
+    </form>
 </body>
 </html>

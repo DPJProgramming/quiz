@@ -1,0 +1,11 @@
+<include href="views/header.html"></include>
+<body>
+    <h1>Here are your choices</h1>
+    <br>
+    <p>Name: {{@SESSION.name}}</p>
+    <u>Your favorite heroes:</u>
+    <repeat group="{{@SESSION.heroes}}" value="{{@hero}}">
+        <p>{{@hero}}</p>
+    </repeat>
+</body>
+</html>
