@@ -1,5 +1,18 @@
 <include href="views/header.html"></include>
 <body>
+    <h1>Super Hero Survey</h1>
+    <br>
 
+    <label for="name">Name </label>
+    <input type="text" id="name">
+
+    <p> Who are you favorite Super Heroes</p>
+    <repeat group="{{@choices}}" value="{{@choice}}}">
+        <label>
+            <input type="checkbox" name="choices[]" value="{{@choice}}">
+            {{@choice}}
+        </label>
+        <br>
+    </repeat>
 </body>
 </html>
